@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
+    <link href="index.js" rel="stylesheet">
+    <link href="favicon.png" rel="icon">
+    <script src="index.js"></script>
+    <title>RH 2000</title>
+  </head>
+  <body>
+    <header>
+      <img src="icon.png">
+    </header>
+    <main>
+      <h1>Générateur de mot de passe</h1>
+      <figure class="rabbit-to-duck">
+	<img id="im" src="rabbit.webp">
+	<figcaption id="te">avec les mots de passe, nous ne sommes pas des lapins de 2 semaines</figcaption>
+      </figure>
+      <form method="get" class="form-password">
+	<div class="formi">
+	  <div>
+	    <label>Nombre de mot de passe :</label>
+	    <input type="text" id="nb" name="namen" required minlength="1" maxlength="8" value="1" />
+	  </div>
+	  <div>
+	    <label>Nombre de caractère :</label>
+	    <input type="text" id="carac" name="namel" required minlength="1" maxlength="8" value="16" />
+	  </div>
+	</div>
+	<div class="form-option">
+	  <div><input type="checkbox" id="dot" name="dot" checked /><label for="dot">.</label></div>
+	  <div><input type="checkbox" id="comma" name="comma" checked /><label for="comma">,</label></div>
+	  <div><input type="checkbox" id="doubledot" name="doubledot" checked /><label for="doubledot">:</label></div>
+	  <div><input type="checkbox" id="dotcomma" name="dotcomma" checked /><label for="dotcomma">;</label></div>
+	  <div><input type="checkbox" id="question" name="question" checked /><label for="question">?</label></div>
+	  <div><input type="checkbox" id="exclamation" name="exclamation" checked /><label for="exclamation">!</label></div>
+	  <div><input type="checkbox" id="slash" name="slash" checked /><label for="slash">/</label></div>
+	  <div><input type="checkbox" id="antislash" name="antislash" checked /><label for="antislash">+-*\</label></div>
+	  <div><input type="checkbox" id="amp" name="amp" checked /><label for="amp">&amp</label></div>
+	  <div><input type="checkbox" id="at" name="at" checked /><label for="at">@</label></div>
+	  <div><input type="checkbox" id="par" name="par" checked /><label for="par">()[]{}&lt;&gt;</label></div>
+	  <div><input type="checkbox" id="underscore" name="underscore" checked /><label for="underscore">_</label></div>
+	  <div><input type="checkbox" id="diese" name="diese" checked /><label for="diese">#</label></div>
+	  <div><input type="checkbox" id="egal" name="egal" checked /><label for="egal">=</label></div>
+	  <div><input type="checkbox" id="bar" name="bar" checked /><label for="bar">|</label></div>
+	  <div><input type="checkbox" id="quote" name="quote" checked /><label for="quote">''""`</label></div>
+	  <div><input type="checkbox" id="percent" name="percent" checked /><label for="percent">%</label></div>
+	  <div><input type="checkbox" id="currency" name="currency" checked /><label for="currency">$€£</label></div>
+	  <div><input type="checkbox" id="tielde" name="tielde" checked /><label for="tielde">~</label></div>
+	</div>
+	<div>
+	  <label>Autres caractères :</label><input type="text" id="txtcar" name="txtcar" />
+	</div>
+	<div class="form-button">
+	  <button type="submit">Générer</button>
+	  <button type="button">Effacer</button>
+	  <button typr="button">Copier</button>
+	</div>
+      </form>
+      <div id="outputgen">
+
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>

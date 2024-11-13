@@ -1,0 +1,81 @@
+body {
+    font-family: Linux Libertine G;
+}
+
+header {
+    height: 100px;
+    background: linear-gradient(red,yellow);
+}
+
+main h1 {
+    font-size: 36pt
+}
+
+header img {
+    height: 90px;
+    margin: 5px;
+}
+
+main {
+    text-align: center;
+    font-size: 16pt;
+}
+
+.rabbit-to-duck {
+    display: block;
+    width: 25%;
+    margin: auto;
+    padding: 10px;
+    border: double thick red;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.rabbit-to-duck img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.rabbit-to-duck figcaption {
+    font-style: italic;
+}
+
+.form-password {
+    display: block;
+    margin: auto;
+}
+
+.formi {
+    display: table;
+    margin: auto;
+}
+
+.formi div {
+    display: table-row;
+}
+
+.formi div label {
+    font-weight: bold;
+    display: table-cell;
+    text-align: end;
+}
+
+.formi div input {
+    width: 5em;
+    display: table-cell;
+}
+
+.form-button {
+    display: inline;
+}
+
+.form-option {
+    display: flex;
+    width: 33%;
+    margin: auto;
+}
+
+.form-option div, .form-option div input, .form-option div label {
+    display: inline;
+}
+    

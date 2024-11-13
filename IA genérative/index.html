@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
+    <link href="index.js" rel="stylesheet">
+    <link href="favicon.png" rel="icon">
+    <script src="index.js"></script>
+    <title>RH 2000</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+	<img src="icon.png">
+	<ul>
+	  <li>À propos</li>
+	</ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Générateur de mot de passe</h1>
+      <figure class="rabbit-to-duck">
+	<img id="im" src="rabbit.webp">
+	<figcaption id="te">avec les mots de passe, nous ne sommes pas des lapins de 2 semaines</figcaption>
+      </figure>
+      <form method="get" class="form-password">
+	<div class="formi">
+	  <div>
+	    <label for="nb">Nombre de mot de passe :</label>
+	    <input type="text" id="nb" name="nb" required minlength="1" maxlength="8" value="1" />
+	  </div>
+	  <div>
+	    <label for="nbc">Nombre de caractère :</label>
+	    <input type="text" id="nbc" name="nbc" required minlength="1" maxlength="8" value="16" />
+	  </div>
+	  <div class='vdigit'>
+	    <label for="nbd">Nombre de chiffre :</label>
+	    <input type="text" id="nbd" name="nbd" minlength="1" maxlength="8" value="1" />
+	  </div>
+	  <div class='vdigit'>
+	    <label for="wd">Poid des chiffres :</label>
+	    <input type="text" id="wd" name="wd" minlength="1" maxlength="8" value="1" />
+	  </div>
+	  <div class='vlower'>
+	    <label for="nbl">Nombre de lettre minuscule :</label>
+	    <input type="text" id="nbl" name="nbl" minlength="1" maxlength="8" value="1" />
+	  </div>
+	  <div class='vlower'>
+	    <label for="wl">Poid des lettres minuscules :</label>
+	    <input type="text" id="wl" name="wl" minlength="1" maxlength="8" value="1" />
+	  </div>
+	  <div class='vupper'>
+	    <label for="nbu">Nombre de lettre majuscule :</label>
+	    <input type="text" id="nbu" name="nbu" minlength="1" maxlength="8" value="1" />
+	  </div>
+	  <div class='vupper'>
+	    <label for="wupper">Poid des lettres majuscules :</label>
+	    <input type="text" id="wu" name="wu" minlength="1" maxlength="8" value="1" />
+	  </div>
+	  <div class='vchar'>
+	    <label for="nbcs">Nombre de caractères spéciaux :</label>
+	    <input type="text" id="nbcs" name="nbcs" minlength="1" maxlength="8" value="1" />
+	  </div>
+	  <div class='vchar'>
+	    <label for="wcs">Poid des caractères spéciaux :</label>
+	    <input type="text" id="wcs" name="wcs" minlength="1" maxlength="8" value="1" />
+	  </div>
+	</div>
+	<div class="form-option">
+	  <div><input type="checkbox" id="digit" name="digit" checked /><label for="digit">0-9</label></div>
+	  <div><input type="checkbox" id="lower" name="lower" checked /><label for="lower">a-z</label></div>
+	  <div><input type="checkbox" id="upper" name="upper" checked /><label for="upper">A-Z</label></div>
+	  <div><input type="checkbox" id="dot" name="dot" checked /><label for="dot">.</label></div>
+	  <div><input type="checkbox" id="comma" name="comma" checked /><label for="comma">,</label></div>
+	  <div><input type="checkbox" id="doubledot" name="doubledot" checked /><label for="doubledot">:</label></div>
+	  <div><input type="checkbox" id="dotcomma" name="dotcomma" checked /><label for="dotcomma">;</label></div>
+	  <div><input type="checkbox" id="question" name="question" checked /><label for="question">?</label></div>
+	  <div><input type="checkbox" id="exclamation" name="exclamation" checked /><label for="exclamation">!</label></div>
+	  <div><input type="checkbox" id="op" name="op" checked /><label for="op">+-*/</label></div>
+	  <div><input type="checkbox" id="antislash" name="antislash" checked /><label for="antislash">\</label></div>
+	  <div><input type="checkbox" id="amp" name="amp" checked /><label for="amp">&amp</label></div>
+	  <div><input type="checkbox" id="at" name="at" checked /><label for="at">@</label></div>
+	  <div><input type="checkbox" id="par" name="par" checked /><label for="par">()[]{}&lt;&gt;</label></div>
+	  <div><input type="checkbox" id="underscore" name="underscore" checked /><label for="underscore">_</label></div>
+	  <div><input type="checkbox" id="diese" name="diese" checked /><label for="diese">#</label></div>
+	  <div><input type="checkbox" id="egal" name="egal" checked /><label for="egal">=</label></div>
+	  <div><input type="checkbox" id="bar" name="bar" checked /><label for="bar">|</label></div>
+	  <div><input type="checkbox" id="quote" name="quote" checked /><label for="quote">'"</label></div>
+	  <div><input type="checkbox" id="percent" name="percent" checked /><label for="percent">%</label></div>
+	  <div><input type="checkbox" id="currency" name="currency" checked /><label for="currency">$€£</label></div>
+	  <div><input type="checkbox" id="space" name="space" /><label for="space">espace</label></div>
+	</div>
+	<div>
+	  <label for="txtcar">Autres caractères :</label><input type="text" id="txtcar" name="txtcar" />
+	</div>
+	<div>
+	  <label for="txtcarx">Caractères à exclure :</label><input type="text" id="txtcarx" name="txtcarx" />
+	</div>
+	<div class="form-button">
+	  <button type="button" onclick="display_password()">Générer</button>
+	  <button type="button" onclick="delete_password()">Effacer</button>
+	  <button typr="button" onclick="copy_password()">Copier</button>
+	</div>
+      </form>
+      <div id="outputgen">
+
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
